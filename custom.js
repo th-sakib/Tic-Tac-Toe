@@ -14,10 +14,10 @@ const turnChange = () => {
 }
 const isWin = () => {
     const winCons = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
+        [0, 1, 2, 2.5, 5.3, 0],// last 3 translate X, translate Y, rotatevw, 28.7vw
+        [3, 4, 5, 2.5, 17, 0],
+        [6, 7, 8, 2.5, 28.7, 0],
+        [0, 3, 6, ],
         [1, 4, 7],
         [2, 5, 8],
         [0, 4, 8],
@@ -65,11 +65,10 @@ reset.addEventListener('click', function () {
 const switchIt = document.getElementById('mode-switch-btn');
 switchIt.addEventListener('click', function () {
     const body = document.getElementsByTagName('body');
-    if (body[0].classList.value == 'light-mode') {
-        body[0].classList.remove('light-mode');
-        body[0].classList.add('dark-mode');
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.value == 'dark-mode') {
+        this.innerText = 'Light Mode';
     } else {
-        body[0].classList.add('light-mode');
-        body[0].classList.remove('dark-mode');
+        this.innerText = "Dark Mode";
     }
 })

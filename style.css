@@ -1,26 +1,23 @@
 :root {
     /* dark mode colors */
-    --primary: #641ae6;
-    --secondary: #d926a9;
-    --accent: #1fb2a6;
-    --neutral: #2a323c;
-    --base-100: #1d232a;
-    --info: #3abff8;
-    --success: #36d399;
-    --warning: #fbbd23;
-    --error: #f87272;
-    /* light mode colors  */
 
-    --light-primary: #5fdd94;
-    --light-secondary: #c26add;
-    --light-hover-secondary: #f5d3ff;
-    --light-accent: #24c611;
-    --light-neutral: #352636;
-    --light-base-100: #ffffff;
-    --light-info: #9ad1e4;
-    --light-success: #115f53;
-    --light-warning: #f1ab65;
-    --light-error: #f23649;
+    /* mode colors  */
+
+    --primary: #5fdd94;
+    --secondary: #c26add;
+    --primary-text: #352636;
+    --hover-secondary: #f5d3ff;
+    --btn-primary: #c26add;
+    --base-100: #FFf;
+}
+
+.dark-mode {
+    --primary: #641ae6;
+    --secondary: #95056e;
+    --primary-text: #af87a5;
+    --hover-secondary: #502e5a;
+    --btn-primary: #d7009d;
+    --base-100: rgb(28, 13, 27);
 }
 
 /* font-family: 'Bebas Neue', sans-serif;
@@ -32,13 +29,9 @@ font-family: 'Source Code Pro', monospace; */
     box-sizing: border-box;
 }
 
-body.light-mode {
-    background: var(--light-base-100);
-    color: var(--light-neutral);
-}
-body.dark-mode {
+body {
     background: var(--base-100);
-    color: var(--secondary)
+    color: var(--primary-text);
 }
 
 
@@ -46,8 +39,6 @@ section {
     padding: 1rem;
     max-width: 1280px;
     margin: 0 auto;
-    background: var(--primary-color);
-
 }
 
 /* utility classes  */
@@ -82,31 +73,44 @@ section {
 
 .primary-btn {
     margin-top: 1rem;
-	padding: 11px 22px;
-	background: var(--light-secondary);
-	cursor: pointer;
-	color: var(--light-base-100);
-	border-radius: 1rem;
-	border: none;
+    padding: 11px 22px;
+    background: var(--btn-primary);
+    cursor: pointer;
+    color: var(--base-100);
+    border-radius: 1rem;
+    border: none;
     transition: .3s ease;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
-
-
 .primary-btn:hover {
     transform: scale(1.1, 1.1);
+}
+
+#line {
+	width: 30vw;
+	height: 2%;
+	background: var(--secondary);
+	position: absolute;
+	border-radius: 14px;
+	transform: translate(3.5vw, 5.3vw);
+	transition: transform .5s ease;
+    /* opacity: 0; */
 }
 
 /* tic tac toe box styles */
 .tictactoi-container {
     font-family: 'Roboto', sans-serif;
-    font-size: 4rem;
+    font-size: 7vw;
     font-weight: 700;
     width: 35vw;
     height: 35vw;
+    position: relative;
+    border-radius: 12px;
 }
 
 .box {
-    border: 1px solid var(--light-secondary);
+    border: 1px solid var(--secondary);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -114,7 +118,7 @@ section {
 }
 
 .box:hover {
-    background: var(--light-hover-secondary)
+    background: var(--hover-secondary)
 }
 
 /* result section style  */
@@ -122,6 +126,7 @@ section {
     font-family: 'Source Code Pro', monospace;
     margin-top: 3rem;
     font-size: 1.3rem;
+    color:
 }
 
 #turn {
@@ -168,7 +173,9 @@ section {
     }
 
     .tictactoi-container {
-        font-size: 3rem;
+        font-size: 4.5rem;
+        width: 56vw;
+        height: 56vw;
     }
 }
 
@@ -178,7 +185,9 @@ section {
     }
 
     .tictactoi-container {
-        font-size: 2rem;
+        font-size: 3.5rem;
+        width: 70vw;
+        height: 70vw;
     }
 }
 
@@ -188,6 +197,8 @@ section {
     }
 
     .tictactoi-container {
-        font-size: 1rem;
+        font-size: 2.8rem;
+        width: 77vw;
+        height: 77vw;
     }
 }
