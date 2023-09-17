@@ -3,19 +3,19 @@
 
     /* mode colors  */
 
-    --primary: #5fdd94;
-    --secondary: #c26add;
+    /* --primary: #5fdd94; */
+    --primary: #c26add;
     --primary-text: #352636;
-    --hover-secondary: #f5d3ff;
+    --hover-primary: #f5d3ff;
     --btn-primary: #c26add;
     --base-100: #FFf;
 }
 
 .dark-mode {
-    --primary: #641ae6;
-    --secondary: #95056e;
+    /* --primary: #641ae6; */
+    --primary: #95056e;
     --primary-text: #af87a5;
-    --hover-secondary: #502e5a;
+    --hover-primary: #502e5a;
     --btn-primary: #d7009d;
     --base-100: rgb(28, 13, 27);
 }
@@ -90,7 +90,7 @@ section {
 #line {
 	width: 30vw;
 	height: 2%;
-	background: var(--secondary);
+	background: var(--primary);
 	position: absolute;
 	border-radius: 14px;
 	transform: translate(3.5vw, 5.3vw);
@@ -110,7 +110,7 @@ section {
 }
 
 .box {
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--primary);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -118,7 +118,7 @@ section {
 }
 
 .box:hover {
-    background: var(--hover-secondary)
+    background: var(--hover-primary)
 }
 
 /* result section style  */
@@ -126,7 +126,6 @@ section {
     font-family: 'Source Code Pro', monospace;
     margin-top: 3rem;
     font-size: 1.3rem;
-    color:
 }
 
 #turn {
